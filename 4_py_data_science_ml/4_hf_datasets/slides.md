@@ -4,6 +4,7 @@ background: https://images.unsplash.com/photo-1639322537228-f710d846310a?q=80&w=
 class: text-center
 highlighter: shiki
 lineNumbers: true
+author: Shengwei You
 info: |
   ## Hugging Face Datasets
   A comprehensive demo of the Hugging Face Datasets library
@@ -15,6 +16,8 @@ mdc: true
 ---
 
 # Hugging Face Datasets 🤗
+
+Shengwei You
 
 The largest hub of ready-to-use datasets for ML models
 
