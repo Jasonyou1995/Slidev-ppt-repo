@@ -357,5 +357,3 @@ rm -r projects
 You now understand the fundamentals of the Command Prompt and PowerShell.
 
 Start exploring, automate your work, and feel the power of the terminal. 💪
-
----
