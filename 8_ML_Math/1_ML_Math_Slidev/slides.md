@@ -11,6 +11,7 @@ mdc: true
 lineNumbers: true
 ---
 
+
 # Linear Algebra for Machine Learning
 
 ### Building Blocks of ML Mathematics
