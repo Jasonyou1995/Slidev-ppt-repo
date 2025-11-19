@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from sklearn.metrics import mean_absolute_error, mean_squared_error
 import os
 
-OUTPUT_DIR = 'img'
+OUTPUT_DIR = 'slides/public/img'
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 # --------------------------------------------------------------------------------
