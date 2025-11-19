@@ -35,7 +35,7 @@ We'll understand the mathematics behind each, see why they matter, and practice 
 <v-clicks>
 
 ## 1. Mean Absolute Error (MAE)
-**Also called L1 norm**
+**Estimation of absolute difference between predicted value and real values**
 
 ## 2. Mean Squared Error (MSE)
 **Squares the errors**
@@ -73,7 +73,6 @@ $$\text{MAE} = \frac{1}{N} \sum_{i=1}^{N} |y_i - \hat{y}_i|$$
 - Finds **absolute distances** between predicted and actual values
 - Takes the **absolute value** of each error
 - **Adds them up** and divides by total number of data points
-- Also called **L1 norm**
 
 </v-clicks>
 
@@ -90,10 +89,8 @@ between what we predicted and what actually happened. No squaring, no complexity
 
 # MAE Visualization
 
-<div class="flex justify-center items-center h-full">
-  <div class="max-w-[90vw] max-h-[80vh] flex items-center justify-center">
-    <img src="/img/01_mae_overview.png" alt="MAE Overview" class="w-full h-full object-contain" />
-  </div>
+<div class="flex justify-center items-center w-full h-[80vh]">
+  <img src="/img/01_mae_overview.png" alt="MAE Overview" class="max-w-full max-h-full object-contain" />
 </div>
 
 <!--
@@ -105,10 +102,8 @@ connecting actual to predicted values - these represent the absolute errors.
 
 # MAE Limitation
 
-<div class="flex justify-center items-center h-full">
-  <div class="max-w-[90vw] max-h-[80vh] flex items-center justify-center">
-    <img src="/img/02_mae_limitation_comparison.png" alt="MAE Limitation" class="w-full h-full object-contain" />
-  </div>
+<div class="flex justify-center items-center w-full h-[65vh]">
+  <img src="/img/02_mae_limitation_comparison.png" alt="MAE Limitation" class="max-w-full max-h-full object-contain" />
 </div>
 
 <div v-click class="mt-4 p-4 bg-yellow-100 rounded-lg">
@@ -189,10 +184,8 @@ This exponential growth makes large errors stand out dramatically.
 
 # MSE Visualization
 
-<div class="flex justify-center items-center h-full">
-  <div class="max-w-[90vw] max-h-[80vh] flex items-center justify-center">
-    <img src="/img/03_mse_overview.png" alt="MSE Overview" class="w-full h-full object-contain" />
-  </div>
+<div class="flex justify-center items-center w-full h-[65vh]">
+  <img src="/img/03_mse_overview.png" alt="MSE Overview" class="max-w-full max-h-full object-contain" />
 </div>
 
 <div v-click class="mt-4 p-4 bg-red-100 rounded-lg">
@@ -274,10 +267,8 @@ but with interpretable units. This is why it's so popular.
 
 # RMSE Visualization
 
-<div class="flex justify-center items-center h-full">
-  <div class="max-w-[90vw] max-h-[80vh] flex items-center justify-center">
-    <img src="/img/04_rmse_overview.png" alt="RMSE Overview" class="w-full h-full object-contain" />
-  </div>
+<div class="flex justify-center items-center w-full h-[65vh]">
+  <img src="/img/04_rmse_overview.png" alt="RMSE Overview" class="max-w-full max-h-full object-contain" />
 </div>
 
 <div v-click class="mt-4 p-4 bg-purple-100 rounded-lg">
@@ -364,10 +355,8 @@ the large error's impact remains.
 
 # All Metrics Comparison
 
-<div class="flex justify-center items-center h-full">
-  <div class="max-w-[90vw] max-h-[80vh] flex items-center justify-center">
-    <img src="/img/05_all_metrics_comparison.png" alt="All Metrics Comparison" class="w-full h-full object-contain" />
-  </div>
+<div class="flex justify-center items-center w-full h-[65vh]">
+  <img src="/img/05_all_metrics_comparison.png" alt="All Metrics Comparison" class="max-w-full max-h-full object-contain" />
 </div>
 
 <div v-click class="mt-4 p-4 bg-yellow-100 rounded-lg">
