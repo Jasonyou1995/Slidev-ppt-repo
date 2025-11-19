@@ -90,9 +90,9 @@ between what we predicted and what actually happened. No squaring, no complexity
 
 # MAE Visualization
 
-<div class="flex justify-center">
+<div class="flex justify-center items-center h-full">
 
-![MAE Overview](../img/01_mae_overview.png)
+<img src="/img/01_mae_overview.png" alt="MAE Overview" style="max-width: 90vw; max-height: 80vh; width: auto; height: auto; object-fit: contain;" />
 
 </div>
 
@@ -105,9 +105,9 @@ connecting actual to predicted values - these represent the absolute errors.
 
 # MAE Limitation
 
-<div class="flex justify-center">
+<div class="flex justify-center items-center h-full">
 
-![MAE Limitation](../img/02_mae_limitation_comparison.png)
+<img src="/img/02_mae_limitation_comparison.png" alt="MAE Limitation" style="max-width: 90vw; max-height: 80vh; width: auto; height: auto; object-fit: contain;" />
 
 </div>
 
@@ -189,14 +189,14 @@ This exponential growth makes large errors stand out dramatically.
 
 # MSE Visualization
 
-<div class="flex justify-center">
+<div class="flex justify-center items-center h-full">
 
-![MSE Overview](../img/03_mse_overview.png)
+<img src="/img/03_mse_overview.png" alt="MSE Overview" style="max-width: 90vw; max-height: 80vh; width: auto; height: auto; object-fit: contain;" />
 
 </div>
 
 <div v-click class="mt-4 p-4 bg-red-100 rounded-lg">
-Notice how the **thickness** of error lines represents squared error magnitude!
+Notice how the <strong>thickness</strong> of error lines represents squared error magnitude!
 </div>
 
 <!--
@@ -274,9 +274,9 @@ but with interpretable units. This is why it's so popular.
 
 # RMSE Visualization
 
-<div class="flex justify-center">
+<div class="flex justify-center items-center h-full">
 
-![RMSE Overview](../img/04_rmse_overview.png)
+<img src="/img/04_rmse_overview.png" alt="RMSE Overview" style="max-width: 90vw; max-height: 80vh; width: auto; height: auto; object-fit: contain;" />
 
 </div>
 
@@ -364,14 +364,14 @@ the large error's impact remains.
 
 # All Metrics Comparison
 
-<div class="flex justify-center">
+<div class="flex justify-center items-center h-full">
 
-![All Metrics Comparison](../img/05_all_metrics_comparison.png)
+<img src="/img/05_all_metrics_comparison.png" alt="All Metrics Comparison" style="max-width: 90vw; max-height: 80vh; width: auto; height: auto; object-fit: contain;" />
 
 </div>
 
 <div v-click class="mt-4 p-4 bg-yellow-100 rounded-lg">
-Notice how **MSE and RMSE differ dramatically** even when MAE is identical!
+Notice how <strong>MSE and RMSE differ dramatically</strong> even when MAE is identical!
 </div>
 
 <!--
@@ -525,7 +525,7 @@ confidence for the more complex metrics.
 
 ## MAE Implementation
 
-```python {monaco}
+```python {all|1-2|3,14-16|17-20} {monaco}
 import numpy as np
 
 def mae(y_true, y_pred):
@@ -588,7 +588,7 @@ This is where the penalty for large errors comes from.
 
 ## MSE Implementation
 
-```python {monaco}
+```python {all|1-2|3,14-16|17-20} {monaco}
 import numpy as np
 
 def mse(y_true, y_pred):
@@ -651,20 +651,10 @@ the MSE function they just wrote. Both approaches are valid.
 
 ## RMSE Implementation
 
-```python {monaco}
+```python {3-6|8-10|11-1} {monaco}
 import numpy as np
 
 def rmse(y_true, y_pred):
-    """
-    Calculate Root Mean Squared Error
-    
-    Parameters:
-    y_true: array-like, actual values
-    y_pred: array-like, predicted values
-    
-    Returns:
-    float: Root Mean Squared Error
-    """
     errors_squared = (y_true - y_pred) ** 2
     mse_value = np.mean(errors_squared)
     return np.sqrt(mse_value)
@@ -687,48 +677,6 @@ the original scale while maintaining the penalty structure.
 
 ---
 
-# Complete Manual Implementation
-
-<div class="text-left" style="max-width: 900px; margin: 0 auto;">
-
-## All Three Metrics Together
-
-```python {monaco}
-import numpy as np
-
-# Generate random data
-np.random.seed(42)
-N = 100
-y_true = np.random.uniform(10, 30, N)
-y_pred = y_true + np.random.normal(0, 2, N)
-
-# MAE
-def mae(y_true, y_pred):
-    return np.mean(np.abs(y_true - y_pred))
-
-# MSE
-def mse(y_true, y_pred):
-    return np.mean((y_true - y_pred) ** 2)
-
-# RMSE
-def rmse(y_true, y_pred):
-    return np.sqrt(np.mean((y_true - y_pred) ** 2))
-
-# Calculate all metrics
-print(f"MAE:  {mae(y_true, y_pred):.4f}")
-print(f"MSE:  {mse(y_true, y_pred):.4f}")
-print(f"RMSE: {rmse(y_true, y_pred):.4f}")
-```
-
-</div>
-
-<!--
-Here's the complete manual implementation. Students can see all three
-metrics implemented cleanly and compare their results.
--->
-
----
-
 # Using Scikit-Learn
 
 <div class="text-left" style="max-width: 900px; margin: 0 auto;">
@@ -746,7 +694,7 @@ from sklearn.metrics import mean_absolute_error, mean_squared_error
 
 ## Calculate Metrics
 
-```python {monaco}
+```python {7-10} {monaco}
 # Generate random data
 np.random.seed(42)
 N = 100
@@ -768,51 +716,6 @@ print(f"RMSE: {rmse_sklearn:.4f}")
 <!--
 Now we show how to use scikit-learn. This is much simpler, but it's important
 that students understand the manual implementation first.
--->
-
----
-
-# Comparison: Manual vs Scikit-Learn
-
-<div class="text-left" style="max-width: 900px; margin: 0 auto;">
-
-## Verify Your Implementation
-
-```python {monaco}
-import numpy as np
-from sklearn.metrics import mean_absolute_error, mean_squared_error
-
-# Generate data
-np.random.seed(42)
-N = 100
-y_true = np.random.uniform(10, 30, N)
-y_pred = y_true + np.random.normal(0, 2, N)
-
-# Manual implementation
-mae_manual = np.mean(np.abs(y_true - y_pred))
-mse_manual = np.mean((y_true - y_pred) ** 2)
-rmse_manual = np.sqrt(mse_manual)
-
-# Scikit-learn
-mae_sklearn = mean_absolute_error(y_true, y_pred)
-mse_sklearn = mean_squared_error(y_true, y_pred)
-rmse_sklearn = np.sqrt(mean_squared_error(y_true, y_pred))
-
-# Compare
-print(f"MAE:  Manual={mae_manual:.6f}, Sklearn={mae_sklearn:.6f}")
-print(f"MSE:  Manual={mse_manual:.6f}, Sklearn={mse_sklearn:.6f}")
-print(f"RMSE: Manual={rmse_manual:.6f}, Sklearn={rmse_sklearn:.6f}")
-```
-
-</div>
-
-<div v-click class="mt-4 p-4 bg-green-100 rounded-lg">
-<strong>They should match!</strong> This verifies your understanding.
-</div>
-
-<!--
-This comparison helps students verify their manual implementation is correct.
-If the values match, they've understood the concepts correctly.
 -->
 
 ---
@@ -871,4 +774,3 @@ Practice implementing these metrics and explore how they behave with different e
 Thank you for following along! Students should now have a solid understanding
 of regression evaluation metrics and be able to implement them confidently.
 -->
-
