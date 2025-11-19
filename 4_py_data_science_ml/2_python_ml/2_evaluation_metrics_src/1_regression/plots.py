@@ -188,7 +188,9 @@ ax.text(0.95, 0.1, mse_formula, transform=ax.transAxes, fontsize=14,
         verticalalignment='bottom', horizontalalignment='right',
         bbox=dict(boxstyle="round,pad=0.5", fc="lightcoral", alpha=0.7))
 
-result_text = f'MAE: {mae_manual:.2f}\nMSE: {mse_manual:.2f}\nRMSE: {rmse_manual:.2f}'
+# result_text = f'MAE: {mae_manual:.2f}\nMSE: {mse_manual:.2f}\nRMSE: {rmse_manual:.2f}'
+result_text = f'MAE: {mae_manual:.2f}\nMSE: {mse_manual:.2f}'
+
 ax.text(0.05, 0.95, result_text, transform=ax.transAxes, fontsize=10,
         verticalalignment='top', horizontalalignment='left', color='darkred', fontweight='bold',
         bbox=dict(boxstyle="round,pad=0.4", fc="white", alpha=0.8))

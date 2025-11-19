@@ -89,7 +89,7 @@ between what we predicted and what actually happened. No squaring, no complexity
 
 # MAE Visualization
 
-<div class="flex justify-center items-center w-full h-[80vh]">
+<div class="flex justify-center items-center w-full h-[30vh]">
   <img src="/img/01_mae_overview.png" alt="MAE Overview" class="max-w-full max-h-full object-contain" />
 </div>
 
@@ -102,7 +102,7 @@ connecting actual to predicted values - these represent the absolute errors.
 
 # MAE Limitation
 
-<div class="flex justify-center items-center w-full h-[65vh]">
+<div class="flex justify-center items-center w-full h-[33vh]">
   <img src="/img/02_mae_limitation_comparison.png" alt="MAE Limitation" class="max-w-full max-h-full object-contain" />
 </div>
 
@@ -184,7 +184,7 @@ This exponential growth makes large errors stand out dramatically.
 
 # MSE Visualization
 
-<div class="flex justify-center items-center w-full h-[65vh]">
+<div class="flex justify-center items-center w-full h-[28vh]">
   <img src="/img/03_mse_overview.png" alt="MSE Overview" class="max-w-full max-h-full object-contain" />
 </div>
 
@@ -267,12 +267,12 @@ but with interpretable units. This is why it's so popular.
 
 # RMSE Visualization
 
-<div class="flex justify-center items-center w-full h-[65vh]">
+<div class="flex justify-center items-center w-full h-[28vh]">
   <img src="/img/04_rmse_overview.png" alt="RMSE Overview" class="max-w-full max-h-full object-contain" />
 </div>
 
 <div v-click class="mt-4 p-4 bg-purple-100 rounded-lg">
-RMSE = √MSE: Same penalty structure, but in **original units**!
+RMSE = √MSE: Same penalty structure, but in <strong>original units</strong>!
 </div>
 
 <!--
@@ -355,7 +355,7 @@ the large error's impact remains.
 
 # All Metrics Comparison
 
-<div class="flex justify-center items-center w-full h-[65vh]">
+<div class="flex justify-center items-center w-full h-[28vh]">
   <img src="/img/05_all_metrics_comparison.png" alt="All Metrics Comparison" class="max-w-full max-h-full object-contain" />
 </div>
 
@@ -736,30 +736,4 @@ that students understand the manual implementation first.
 <!--
 Let's summarize what we've learned. These key points should stick with students
 as they evaluate regression models in their future work.
--->
-
----
-
-# Thank You!
-
-<div class="text-center">
-
-## Questions?
-
-Practice implementing these metrics and explore how they behave with different error patterns.
-
-<div class="mt-8">
-
-**Next Steps:**
-- Try implementing on your own datasets
-- Compare metrics across different models
-- Explore when each metric is most appropriate
-
-</div>
-
-</div>
-
-<!--
-Thank you for following along! Students should now have a solid understanding
-of regression evaluation metrics and be able to implement them confidently.
 -->
