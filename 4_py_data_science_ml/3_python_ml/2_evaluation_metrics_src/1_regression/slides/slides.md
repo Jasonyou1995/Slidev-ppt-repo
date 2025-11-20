@@ -9,12 +9,15 @@ info: |
   with visualizations and hands-on Python exercises.
 transition: slide-left
 mdc: true
+author: Shengwei Y
 lineNumbers: false
 ---
 
 # Regression Evaluation Metrics
 
 ## MAE, MSE, and RMSE Explained
+
+HKBU FIN7830 (Shengwei You)
 
 <div class="pt-12">
   <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" flex="~ justify-center items-center gap-2" hover="bg-white bg-opacity-10">
@@ -89,7 +92,7 @@ between what we predicted and what actually happened. No squaring, no complexity
 
 # MAE Visualization
 
-<div class="flex justify-center items-center w-full h-[30vh]">
+<div class="flex justify-center items-center w-full h-[55vh]">
   <img src="/img/01_mae_overview.png" alt="MAE Overview" class="max-w-full max-h-full object-contain" />
 </div>
 
@@ -102,7 +105,7 @@ connecting actual to predicted values - these represent the absolute errors.
 
 # MAE Limitation
 
-<div class="flex justify-center items-center w-full h-[33vh]">
+<div class="flex justify-center items-center w-full h-[55vh]">
   <img src="/img/02_mae_limitation_comparison.png" alt="MAE Limitation" class="max-w-full max-h-full object-contain" />
 </div>
 
@@ -184,7 +187,7 @@ This exponential growth makes large errors stand out dramatically.
 
 # MSE Visualization
 
-<div class="flex justify-center items-center w-full h-[28vh]">
+<div class="flex justify-center items-center w-full h-[45vh]">
   <img src="/img/03_mse_overview.png" alt="MSE Overview" class="max-w-full max-h-full object-contain" />
 </div>
 
@@ -267,7 +270,7 @@ but with interpretable units. This is why it's so popular.
 
 # RMSE Visualization
 
-<div class="flex justify-center items-center w-full h-[28vh]">
+<div class="flex justify-center items-center w-full h-[45vh]">
   <img src="/img/04_rmse_overview.png" alt="RMSE Overview" class="max-w-full max-h-full object-contain" />
 </div>
 
@@ -355,7 +358,7 @@ the large error's impact remains.
 
 # All Metrics Comparison
 
-<div class="flex justify-center items-center w-full h-[28vh]">
+<div class="flex justify-center items-center w-full h-[45vh]">
   <img src="/img/05_all_metrics_comparison.png" alt="All Metrics Comparison" class="max-w-full max-h-full object-contain" />
 </div>
 
